@@ -37,7 +37,7 @@ const Home = () => {
     <>
       <Container>
         <Title>Welcome to SmartTruck Logistics</Title>
-        <LogoImg src="public/truck.jpg" alt="Truck" />
+        <LogoImg src="/truck.jpg" alt="Truck" />
         <Description>
           At <Highlight>SmartTruck Logistics</Highlight>, we excel in managing
           trucks and drivers to ensure smooth and efficient operations. Our

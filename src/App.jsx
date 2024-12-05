@@ -143,7 +143,7 @@ function App() {
     <>
       <Header>
         <Logo onClick={() => navigate("/home")}>
-          <LogoImg src="\public\logo.png" alt="Logo" />
+          <LogoImg src="/logo.png" alt="Logo" />
           {/* <LogoText>Styled App</LogoText> */}
         </Logo>
         <NavMenu>
