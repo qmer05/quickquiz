@@ -1,0 +1,276 @@
+{
+  "trucks": [
+    {
+      "truckId": 1,
+      "name": "Big Rig",
+      "model": "Kenworth T680",
+      "capacity": 20000,
+      "maxSpeed": 120,
+      "weight": 8000,
+      "length": 18,
+      "drivers": [
+        1,
+        2
+      ],
+      "id": "fafc"
+    },
+    {
+      "truckId": 2,
+      "name": "Freight King",
+      "model": "Freightliner Cascadia",
+      "capacity": 18000,
+      "maxSpeed": 110,
+      "weight": 7500,
+      "length": 17,
+      "drivers": [
+        3,
+        4
+      ],
+      "id": "aef0"
+    },
+    {
+      "truckId": 3,
+      "name": "Heavy Hauler",
+      "model": "Volvo FH16",
+      "capacity": 22000,
+      "maxSpeed": 130,
+      "weight": 8500,
+      "length": 20,
+      "drivers": [
+        5,
+        6
+      ],
+      "id": "7bb2"
+    },
+    {
+      "truckId": 4,
+      "name": "Roadmaster",
+      "model": "Peterbilt 579",
+      "capacity": 20000,
+      "maxSpeed": 115,
+      "weight": 7800,
+      "length": 19,
+      "drivers": [
+        7,
+        8
+      ],
+      "id": "3beb"
+    },
+    {
+      "truckId": 5,
+      "name": "Steel Mover",
+      "model": "Mack Anthem",
+      "capacity": 21000,
+      "maxSpeed": 125,
+      "weight": 8200,
+      "length": 18.5,
+      "drivers": [
+        9,
+        10
+      ],
+      "id": "d512"
+    },
+    {
+      "truckId": 6,
+      "name": "Trailblazer",
+      "model": "Western Star 5700XE",
+      "capacity": 19000,
+      "maxSpeed": 115,
+      "weight": 7700,
+      "length": 16.5,
+      "drivers": [],
+      "id": "6547"
+    },
+    {
+      "truckId": 7,
+      "name": "Cargo Titan",
+      "model": "Scania R 580",
+      "capacity": 25000,
+      "maxSpeed": 140,
+      "weight": 8700,
+      "length": 21,
+      "drivers": [],
+      "id": "ee09"
+    },
+    {
+      "truckId": 8,
+      "name": "Highway Beast",
+      "model": "MAN TGX",
+      "capacity": 24000,
+      "maxSpeed": 130,
+      "weight": 8400,
+      "length": 20,
+      "drivers": [],
+      "id": "bb05"
+    },
+    {
+      "truckId": 9,
+      "name": "Load Warrior",
+      "model": "DAF XF",
+      "capacity": 23000,
+      "maxSpeed": 125,
+      "weight": 8300,
+      "length": 19.5,
+      "drivers": [],
+      "id": "fb90"
+    },
+    {
+      "truckId": 10,
+      "name": "MegaMover",
+      "model": "International LT",
+      "capacity": 20000,
+      "maxSpeed": 120,
+      "weight": 8100,
+      "length": 18,
+      "drivers": [],
+      "id": "cd04"
+    }
+  ],
+  "drivers": [
+    {
+      "driverId": 1,
+      "name": "John Doe",
+      "license": "AB123456",
+      "phone": "123-456-7890",
+      "email": "john.doe@example.com",
+      "address": {
+        "street": "123 Main St",
+        "zip": "12345",
+        "city": "Trucksville"
+      },
+      "id": "6e79"
+    },
+    {
+      "driverId": 2,
+      "name": "Jane Smith",
+      "license": "CD789012",
+      "phone": "234-567-8901",
+      "email": "jane.smith@example.com",
+      "address": {
+        "street": "456 Elm St",
+        "zip": "23456",
+        "city": "Haulertown"
+      },
+      "id": "67b5"
+    },
+    {
+      "driverId": 3,
+      "name": "Mike Johnson",
+      "license": "EF345678",
+      "phone": "345-678-9012",
+      "email": "mike.johnson@example.com",
+      "address": {
+        "street": "789 Oak St",
+        "zip": "34567",
+        "city": "DriveCity"
+      },
+      "id": "7bf5"
+    },
+    {
+      "driverId": 4,
+      "name": "Emily Davis",
+      "license": "GH901234",
+      "phone": "456-789-0123",
+      "email": "emily.davis@example.com",
+      "address": {
+        "street": "101 Pine St",
+        "zip": "45678",
+        "city": "Routeburg"
+      },
+      "id": "ce27"
+    },
+    {
+      "driverId": 5,
+      "name": "Steve Wilson",
+      "license": "IJ567890",
+      "phone": "567-890-1234",
+      "email": "steve.wilson@example.com",
+      "address": {
+        "street": "202 Maple St",
+        "zip": "56789",
+        "city": "CargoCity"
+      },
+      "id": "2f83"
+    },
+    {
+      "driverId": 6,
+      "name": "Karen Martinez",
+      "license": "KL123456",
+      "phone": "678-901-2345",
+      "email": "karen.martinez@example.com",
+      "address": {
+        "street": "303 Cedar St",
+        "zip": "67890",
+        "city": "LogisticsVille"
+      },
+      "id": "8a40"
+    },
+    {
+      "driverId": 7,
+      "name": "Paul Anderson",
+      "license": "MN789012",
+      "phone": "789-012-3456",
+      "email": "paul.anderson@example.com",
+      "address": {
+        "street": "404 Birch St",
+        "zip": "78901",
+        "city": "Transportown"
+      },
+      "id": "1f4a"
+    },
+    {
+      "driverId": 8,
+      "name": "Laura Brown",
+      "license": "OP345678",
+      "phone": "890-123-4567",
+      "email": "laura.brown@example.com",
+      "address": {
+        "street": "505 Walnut St",
+        "zip": "89012",
+        "city": "Trailertown"
+      },
+      "id": "e4a3"
+    },
+    {
+      "driverId": 9,
+      "name": "Sam Thomas",
+      "license": "QR901234",
+      "phone": "901-234-5678",
+      "email": "sam.thomas@example.com",
+      "address": {
+        "street": "606 Cherry St",
+        "zip": "90123",
+        "city": "Routetown"
+      },
+      "id": "ddd5"
+    },
+    {
+      "driverId": 10,
+      "name": "Angela White",
+      "license": "ST567890",
+      "phone": "012-345-6789",
+      "email": "angela.white@example.com",
+      "address": {
+        "street": "707 Aspen St",
+        "zip": "01234",
+        "city": "Pathville"
+      },
+      "id": "aac8"
+    },
+    {
+      "id": "99bb",
+      "name": "lars larsen",
+      "license": "TY246434",
+      "phone": "84397483",
+      "email": "lars@larsen.dk",
+      "assignedTruck": "2",
+      "agreeToTerms": "on",
+      "address": {
+        "street": "Jagtvej 130",
+        "zip": "2100",
+        "city": "København Ø"
+      },
+      "driverId": 11
+    }
+  ]
+}
