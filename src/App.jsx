@@ -120,6 +120,9 @@ function App() {
   const URL = "http://localhost:3000";
 
   useEffect(() => {
+
+    document.title = "SmartTruck Logistics"; // Set the default page title
+
     const fetchTrucks = async () => {
       const response = await fetch(URL + "/trucks");
       const data = await response.json();
