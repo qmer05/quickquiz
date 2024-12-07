@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 
 // Header Component
 const Header = styled.header`
-  background-color: #99D9EA;
+  background-color: #99d9ea;
   color: white;
   padding: 20px 40px;
   display: flex;
@@ -28,11 +28,13 @@ const LogoImg = styled.img`
   margin-right: 15px;
 `;
 
+/*
 const LogoText = styled.h1`
   font-size: 1.8rem;
   color: white;
   margin: 0;
 `;
+*/
 
 const NavMenu = styled.nav`
   display: flex;
@@ -69,6 +71,7 @@ const Content = styled.div`
   color: #333;
 `;
 
+/*
 const LeftMenu = styled.div`
   width: 200px;
   background-color: #f4f4f4;
@@ -84,6 +87,7 @@ const LeftMenuItem = styled(Link)`
     text-decoration: underline;
   }
 `;
+*/
 
 const MainContent = styled.div`
   flex: 1;
@@ -93,6 +97,7 @@ const MainContent = styled.div`
   overflow-y: auto; /* Allows scrolling inside the main content if needed */
 `;
 
+/*
 const ErrorBanner = styled.div`
   background-color: #f8d7da;
   color: #721c24;
@@ -100,6 +105,7 @@ const ErrorBanner = styled.div`
   margin-bottom: 20px;
   border-radius: 5px;
 `;
+*/
 
 const Footer = styled.footer`
   background-color: lightgrey;
@@ -121,7 +127,6 @@ function App() {
   const URL = "https://the-trivia-api.com/v2/questions";
 
   useEffect(() => {
-
     document.title = "Quick Quiz"; // Set the default page title
 
     const fetchQuizzes = async () => {
@@ -142,16 +147,14 @@ function App() {
         </Logo>
         <NavMenu>
           <NavItem to="/home">Home</NavItem>
-          <NavItem to="/quiz">Quiz</NavItem>
+          <NavItem to="/quizzes">Quiz</NavItem>
           <NavItem to="/highscore">Highscore</NavItem>
         </NavMenu>
       </Header>
 
       <Content>
         <MainContent>
-          <Outlet
-            context={{ quizzes: quizzes}}
-          />
+          <Outlet context={{ quizzes: quizzes }} />
         </MainContent>
       </Content>
 

@@ -46,6 +46,11 @@ const Title = styled.h2`
 
 const Quizes = () => {
   const { quizzes } = useOutletContext();
+  const navigate = useNavigate();
+
+  const handleclick = (quiz) => {
+    navigate(`/quiz/${quiz.id}`, { state: { quiz } });
+  };
 
   return (
     <>
@@ -60,8 +65,8 @@ const Quizes = () => {
         </Thead>
         <tbody>
           {quizzes.map((quiz) => (
-            <Tr key={quiz.id}>
-              <Td>{quiz.category.replace(/_/g, ' ')}</Td>
+            <Tr key={quiz.id} onClick={() => handleclick(quiz)}>
+              <Td>{quiz.category.replace(/_/g, " ")}</Td>
               <Td>{quiz.difficulty}</Td>
             </Tr>
           ))}

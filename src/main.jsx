@@ -11,6 +11,7 @@ import App from "./App.jsx";
 import Home from "./pages/Home.jsx";
 import Quizzes from "./pages/Quizzes.jsx";
 import Highscores from "./pages/Highscores.jsx";
+import QuizDetail from "./pages/QuizDetail.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -18,6 +19,7 @@ const router = createBrowserRouter(
       <Route index element={<Home />} />{" "}
       <Route path="home" element={<Home />} />
       <Route path="quiz" element={<Quizzes />} />
+      <Route path="/quiz/:id" element={<QuizDetail />} />
       <Route path="highscore" element={<Highscores />} />
     </Route>
   )
