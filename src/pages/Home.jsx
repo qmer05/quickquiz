@@ -16,7 +16,7 @@ const Title = styled.h1`
 `;
 
 const Description = styled.p`
-  font-size: 1.0rem;
+  font-size: 1rem;
   color: #555;
   text-align: center;
   max-width: 600px;
@@ -36,15 +36,15 @@ const Home = () => {
   return (
     <>
       <Container>
-        <Title>Welcome to SmartTruck Logistics</Title>
-        <LogoImg src="/truck.jpg" alt="Truck" />
+        <Title>Welcome to Quick Quiz</Title>
+        <LogoImg src="/home-quiz.jpg" alt="Truck" />
         <Description>
-          At <Highlight>SmartTruck Logistics</Highlight>, we excel in managing
-          trucks and drivers to ensure smooth and efficient operations. Our
-          platform helps businesses monitor <Highlight>fleets</Highlight>,
-          assign <Highlight>drivers</Highlight>, and achieve{" "}
-          <Highlight>timely deliveries</Highlight>. Trust us for reliability and
-          efficiency every step of the way!
+          At <Highlight>Quick Quiz</Highlight>, we bring excitement and learning
+          together with engaging and fun trivia challenges. Our platform offers
+          a wide range of <Highlight>quiz categories</Highlight>, tests your{" "}
+          <Highlight>knowledge</Highlight>, and sharpens your{" "}
+          <Highlight>thinking skills</Highlight>. Dive in for a fast-paced,
+          thrilling trivia experience that’s perfect for everyone!
         </Description>
       </Container>
     </>

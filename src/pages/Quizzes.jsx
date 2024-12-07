@@ -1,8 +1,8 @@
 import { useNavigate, useOutletContext } from "react-router-dom";
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Table = styled.table`
-  width: 80%; /* Adjust the width to make it smaller */
+  width: 30%; /* Adjust the width to make it smaller */
   border-collapse: collapse;
   margin: 20px auto; /* Center the table */
   font-size: 16px; /* Slightly smaller font size */
@@ -44,44 +44,25 @@ const Title = styled.h2`
   font-family: Arial, Helvetica, sans-serif; /* Apply standard font */
 `;
 
-const Drivers = () => {
-  const { drivers } = useOutletContext();
-  const navigate = useNavigate();
-
-  const handleClick = (id) => {
-    navigate(`/drivers/${id}`);
-  };
+const Quizes = () => {
+  const { quizzes } = useOutletContext();
 
   return (
     <>
-      <Title>Driver List</Title>
+      <Title>Quiz List</Title>
 
       <Table>
         <Thead>
           <Tr>
-            <Th>Name</Th>
-            <Th>License</Th>
-            <Th>Phone</Th>
-            <Th>Email</Th>
-            <Th>Address</Th>
+            <Th>Category</Th>
+            <Th>Difficulty</Th>
           </Tr>
         </Thead>
         <tbody>
-          {drivers.map((driver) => (
-            <Tr key={driver.id} onClick={() => handleClick(driver.id)}>
-              <Td>{driver.name}</Td>
-              <Td>{driver.license}</Td>
-              <Td>{driver.phone}</Td>
-              <Td>{driver.email}</Td>
-              <Td>
-                {driver.address && (
-                  <>
-                    {driver.address.street + " "}
-                    {driver.address.zip + " "}
-                    {driver.address.city}
-                  </>
-                )}
-              </Td>
+          {quizzes.map((quiz) => (
+            <Tr key={quiz.id}>
+              <Td>{quiz.category.replace(/_/g, ' ')}</Td>
+              <Td>{quiz.difficulty}</Td>
             </Tr>
           ))}
         </tbody>
@@ -90,4 +71,4 @@ const Drivers = () => {
   );
 };
 
-export default Drivers;
+export default Quizes;

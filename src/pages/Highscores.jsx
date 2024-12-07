@@ -1,5 +1,4 @@
-import { useNavigate, useOutletContext } from "react-router-dom";
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const Table = styled.table`
   width: 80%; /* Adjust the width to make it smaller */
@@ -44,44 +43,13 @@ const Title = styled.h2`
   font-family: Arial, Helvetica, sans-serif; /* Apply standard font */
 `;
 
-const Trucks = () => {
-  const { trucks } = useOutletContext();
-  const navigate = useNavigate();
-
-  const handleClick = (id) => {
-    navigate(`/trucks/${id}`);
-  };
+const Highscores = () => {
 
   return (
     <>
-      <Title>Truck List</Title>
-
-      <Table>
-        <Thead>
-          <Tr>
-            <Th>Name</Th>
-            <Th>Model</Th>
-            <Th>Capacity</Th>
-            <Th>Max Speed</Th>
-            <Th>Weight</Th>
-            <Th>Length</Th>
-          </Tr>
-        </Thead>
-        <tbody>
-          {trucks.map((truck) => (
-            <Tr key={truck.id} onClick={() => handleClick(truck.id)}>
-              <Td>{truck.name}</Td>
-              <Td>{truck.model}</Td>
-              <Td>{truck.capacity}</Td>
-              <Td>{truck.maxSpeed}</Td>
-              <Td>{truck.weight}</Td>
-              <Td>{truck.length}</Td>
-            </Tr>
-          ))}
-        </tbody>
-      </Table>
+      
     </>
   );
 };
 
-export default Trucks;
+export default Highscores;

@@ -9,22 +9,16 @@ import {
 // import './index.css'
 import App from "./App.jsx";
 import Home from "./pages/Home.jsx";
-import Trucks from "./pages/Trucks.jsx";
-import Drivers from "./pages/Drivers.jsx";
-import RegisterDriver from "./pages/RegisterDriver.jsx";
-import TruckCard from "./pages/TruckCard.jsx";
-import DriverCard from "./pages/DriverCard.jsx";
+import Quizzes from "./pages/Quizzes.jsx";
+import Highscores from "./pages/Highscores.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index element={<Home />} />{" "}
       <Route path="home" element={<Home />} />
-      <Route path="trucks" element={<Trucks />} />
-      <Route path="drivers" element={<Drivers />} />
-      <Route path="register-driver" element={<RegisterDriver />} />
-      <Route path="trucks/:id" element={<TruckCard />} />
-      <Route path="drivers/:id" element={<DriverCard />} />
+      <Route path="quiz" element={<Quizzes />} />
+      <Route path="highscore" element={<Highscores />} />
     </Route>
   )
 );

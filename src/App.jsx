@@ -6,13 +6,16 @@ import { useState, useEffect } from "react";
 
 // Header Component
 const Header = styled.header`
-  background-color: #f1fafe;
+  background-color: #99D9EA;
   color: white;
   padding: 20px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 95%;
 `;
 
 const Logo = styled.div`
@@ -61,7 +64,7 @@ const NavItem = styled(Link)`
 // Content Layout
 const Content = styled.div`
   display: flex;
-  margin-top: 20px;
+  margin-top: 100px; /* Adjust this value based on the height of your header */
   margin-bottom: 80px; /* Adjust for footer height */
   color: #333;
 `;
@@ -114,33 +117,21 @@ const Footer = styled.footer`
 
 function App() {
   const navigate = useNavigate();
-  const [trucks, setTrucks] = useState([]);
-  const [drivers, setDrivers] = useState([]);
-  const [driver, setDriver] = useState({});
-  const URL = "http://localhost:3000";
+  const [quizzes, setQuizzes] = useState([]);
+  const URL = "https://the-trivia-api.com/v2/questions";
 
   useEffect(() => {
 
-    document.title = "SmartTruck Logistics"; // Set the default page title
+    document.title = "Quick Quiz"; // Set the default page title
 
-    const fetchTrucks = async () => {
-      const response = await fetch(URL + "/trucks");
+    const fetchQuizzes = async () => {
+      const response = await fetch(URL);
       const data = await response.json();
-      setTrucks(data);
+      setQuizzes(data);
       console.log(data); // Log the fetched data
     };
-    fetchTrucks();
+    fetchQuizzes();
   }, []);
-
-  useEffect(() => {
-    const fetchDrivers = async () => {
-      const response = await fetch(URL + "/drivers");
-      const data = await response.json();
-      setDrivers(data);
-      console.log(data); // Log the fetched data
-    };
-    fetchDrivers();
-  }, [driver]); // useEffect hook: The effect re-runs whenever the driver state changes.
 
   return (
     <>
@@ -151,22 +142,21 @@ function App() {
         </Logo>
         <NavMenu>
           <NavItem to="/home">Home</NavItem>
-          <NavItem to="/trucks">Trucks</NavItem>
-          <NavItem to="/drivers">Drivers</NavItem>
-          <NavItem to="/register-driver">Register drivers</NavItem>
+          <NavItem to="/quiz">Quiz</NavItem>
+          <NavItem to="/highscore">Highscore</NavItem>
         </NavMenu>
       </Header>
 
       <Content>
         <MainContent>
           <Outlet
-            context={{ trucks: trucks, drivers: drivers, setDriver: setDriver }}
+            context={{ quizzes: quizzes}}
           />
         </MainContent>
       </Content>
 
       <Footer>
-        <p>&copy; 2024 SmartTruck Logistics. All rights reserved.</p>
+        <p>&copy; 2024 Quick Quiz. All rights reserved.</p>
       </Footer>
     </>
   );
