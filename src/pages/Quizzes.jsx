@@ -1,78 +1,51 @@
-import { useNavigate, useOutletContext } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
-const Table = styled.table`
-  width: 30%; /* Adjust the width to make it smaller */
-  border-collapse: collapse;
-  margin: 20px auto; /* Center the table */
-  font-size: 16px; /* Slightly smaller font size */
-  text-align: left;
+// Styled Components
+const StartContainer = styled.div`
+  padding: 20px;
+  margin: 20px auto;
+  width: 50%;
   background-color: #f0f8ff; /* Light blue background */
-  border: 1px solid #b0c4de; /* Light steel blue border */
-  font-family: Arial, Helvetica, sans-serif; /* Apply standard font */
-  border-radius: 8px; /* Smooth edges */
-  overflow: hidden; /* Ensure rounded corners */
+  border: 1px solid #b0c4de;
+  border-radius: 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 `;
 
-const Thead = styled.thead`
-  background-color: #4682b4; /* Steel blue background */
-  color: white; /* White text color */
-`;
-
-const Th = styled.th`
-  padding: 10px;
-  border-bottom: 1px solid #b0c4de; /* Light steel blue border */
-`;
-
-const Tr = styled.tr`
-  &:nth-child(even) {
-    background-color: #e6f2ff; /* Light blue background for even rows */
-  }
+const StartButton = styled.button`
+  background-color: #4682b4;
+  color: white;
+  padding: 20px 40px;
+  margin: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.5rem;
 
   &:hover {
-    background-color: #d0e7ff; /* Light blue background on hover */
+    background-color: #5a7f97;
   }
-`;
-
-const Td = styled.td`
-  padding: 10px;
-  border-bottom: 1px solid #b0c4de; /* Light steel blue border */
 `;
 
 const Title = styled.h2`
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif; /* Apply standard font */
+  font-family: Arial, Helvetica, sans-serif;
+  margin-bottom: 20px;
 `;
 
 const Quizes = () => {
-  const { quizzes } = useOutletContext();
   const navigate = useNavigate();
 
-  const handleclick = (quiz) => {
-    navigate(`/quiz/${quiz.id}`, { state: { quiz } });
+  const handleStartGame = () => {
+    // Navigate to QuizDetail page to start the game
+    navigate("/quizgame");
   };
 
   return (
-    <>
-      <Title>Quiz List</Title>
-
-      <Table>
-        <Thead>
-          <Tr>
-            <Th>Category</Th>
-            <Th>Difficulty</Th>
-          </Tr>
-        </Thead>
-        <tbody>
-          {quizzes.map((quiz) => (
-            <Tr key={quiz.id} onClick={() => handleclick(quiz)}>
-              <Td>{quiz.category.replace(/_/g, " ")}</Td>
-              <Td>{quiz.difficulty}</Td>
-            </Tr>
-          ))}
-        </tbody>
-      </Table>
-    </>
+    <StartContainer>
+      <Title>Welcome to the Quiz Game</Title>
+      <StartButton onClick={handleStartGame}>Start Game</StartButton>
+    </StartContainer>
   );
 };
 
