@@ -36,7 +36,7 @@ const Home = () => {
   return (
     <>
       <Container>
-        <Title>Welcome to Quick Quiz</Title>
+        <Title>Welcome to Quick Quiz!</Title>
         <LogoImg src="/home-quiz.jpg" alt="Truck" />
         <Description>
           At <Highlight>Quick Quiz</Highlight>, we bring excitement and learning

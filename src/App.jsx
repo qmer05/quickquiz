@@ -162,7 +162,6 @@ function App() {
         <p>&copy; 2024 Quick Quiz. All rights reserved.</p>
       </Footer>
     </>
-    
   );
 }
 
