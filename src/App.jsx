@@ -124,6 +124,8 @@ const Footer = styled.footer`
 function App() {
   const navigate = useNavigate();
   const [quizzes, setQuizzes] = useState([]);
+  // using another api from my own because CORS
+  // https://quickquizapi.omertech.dk/api/questions
   const URL = "https://the-trivia-api.com/v2/questions";
 
   useEffect(() => {

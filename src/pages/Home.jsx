@@ -39,6 +39,7 @@ const Home = () => {
         <Title>Welcome to Quick Quiz!</Title>
         <LogoImg src="/home-quiz.jpg" alt="Truck" />
         <Description>
+        <p>API: <a href="https://quickquizapi.omertech.dk/api/questions" target="_blank" rel="noopener noreferrer">https://quickquizapi.omertech.dk/api/questions</a></p>
           At <Highlight>Quick Quiz</Highlight>, we bring excitement and learning
           together with engaging and fun trivia challenges. Our platform offers
           a wide range of <Highlight>quiz categories</Highlight>, tests your{" "}
