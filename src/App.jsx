@@ -127,6 +127,7 @@ function App() {
   // using another api from my own because CORS
   // https://quickquizapi.omertech.dk/api/questions
   const URL = "https://the-trivia-api.com/v2/questions";
+  
 
   useEffect(() => {
     document.title = "Quick Quiz"; // Set the default page title
